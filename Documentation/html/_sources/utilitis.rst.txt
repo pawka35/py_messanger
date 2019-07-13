@@ -1,0 +1,52 @@
+Директория Utilites
+==============================
+
+Модуль serverGUI.py
+----------------------------
+.. automodule:: serverGUI
+	:members:
+	
+Окно GUI сервера
+---------------------------------
+.. image:: /_static/serverGUI.JPG
+
+	
+Модуль ServerBDClass.py
+----------------------------
+.. automodule:: ServerBDClass
+	:members:
+
+Модуль ServerVerifier.py
+----------------------------
+.. automodule:: ServerVerifier
+	:members:
+	
+	
+Модуль clientGUI.py
+----------------------------
+.. automodule:: clientGUI
+	:members:
+
+Окно GUI клиента
+---------------------------------
+.. image:: /_static/clientGUI.JPG
+
+Модуль ClientBDClass.py
+----------------------------
+.. automodule:: ClientBDClass
+	:members:
+
+Модуль ClientVerifier.py
+----------------------------
+.. automodule:: ClientVerifier
+	:members:
+
+Модуль errors.py
+----------------------------
+.. automodule:: errors
+	:members:
+	
+Модуль NonNegativeCheck.py
+----------------------------
+.. automodule:: NonNegativeCheck
+	:members:

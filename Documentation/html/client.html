@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Директория ClientCore/clients &#8212; документация Messendger 1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Директория ServerCore/server" href="server.html" />
+    <link rel="prev" title="Корневая директория" href="rootFolder.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="clientcore-clients">
+<h1>Директория ClientCore/clients<a class="headerlink" href="#clientcore-clients" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="module-client">
+<span id="client-py"></span><h2>Модуль client.py<a class="headerlink" href="#module-client" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Функции клиента:​
+- подключается к серверу
+- принимает ​с​ообщение ​от сервера;
+- формирует ​​ответ серверу;
+- имеет ​​параметры ​к​омандной ​с​троки:
+- &lt;addr&gt; [port]
+​-​ ​I​P-адрес ​​сервер ​(​по ​у​молчанию ​localhost).
+- [port] ​-​ ​​TCP-порт ​​для ​​работы ​(​по ​у​молчанию ​​использует ​​порт ​​7777);
+- Реализован функционал работы со списком контактов по протоколу JIM:</p>
+<dl class="class">
+<dt id="client.Client">
+<em class="property">class </em><code class="sig-prename descclassname">client.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">password</em>, <em class="sig-param">res_queue=None</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client" title="Ссылка на это определение">¶</a></dt>
+<dd><dl class="method">
+<dt id="client.Client.DellContact">
+<code class="sig-name descname">DellContact</code><span class="sig-paren">(</span><em class="sig-param">contactName</em>, <em class="sig-param">stage=0</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.DellContact" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Удаление контакта из локальной БД пользователя
+:param contactName: имя контакта
+:param stage - на каком этапе добавления (запрос, или уже добавляем)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.InContact">
+<code class="sig-name descname">InContact</code><span class="sig-paren">(</span><em class="sig-param">contactName</em>, <em class="sig-param">stage=0</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.InContact" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Добавление контакта в локальную БД пользователя
+:param contactName: имя контакта
+:param stage - на каком этапе добавления (запрос, или уже добавляем)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.client_authenticate">
+<code class="sig-name descname">client_authenticate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.client_authenticate" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Аутентификация клиента на сервере.
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.connectToServer">
+<code class="sig-name descname">connectToServer</code><span class="sig-paren">(</span><em class="sig-param">client</em>, <em class="sig-param">countTry</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.connectToServer" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Соединенеие с сервером
+:param client: сокет
+:param startOption: хост и порт сервера
+:param countTry: кол-во попыток подключения
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.create_presence">
+<code class="sig-name descname">create_presence</code><span class="sig-paren">(</span><em class="sig-param">account_name='Guest'</em>, <em class="sig-param">password=None</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.create_presence" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Формируем запрос на подключение к серверу
+:param account_name: имя пользователя, по=умолчанию Guest
+:param password: пароль, передается только в случае регистрации, в остальных - пустая строка
+:return message - сообщение для сервера о попытки подключения по протоколу</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.criptPassword">
+<code class="sig-name descname">criptPassword</code><span class="sig-paren">(</span><em class="sig-param">password</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.criptPassword" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Шифрование пароля:
+:param password: пароль в текстовом виде, из поля для ввода пароля GUI-клиента
+:return: хэш пароля с солью</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.getAllUsers">
+<code class="sig-name descname">getAllUsers</code><span class="sig-paren">(</span><em class="sig-param">client</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.getAllUsers" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запрос и получения списка контактов из БД сервера
+:param client: сокет клиента дял отправки сообщения с запросом списка пользователей
+:return</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.read_messages">
+<code class="sig-name descname">read_messages</code><span class="sig-paren">(</span><em class="sig-param">client</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.read_messages" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Клиент читает входящие сообщения в бесконечном цикле
+:param client: сокет клиента
+:return</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.start">
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><em class="sig-param">password=None</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.start" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запуск клиента:
+:param password: пароль в текстовом виде, из поля для ввода пароля GUI-клиента
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.translate_message">
+<code class="sig-name descname">translate_message</code><span class="sig-paren">(</span><em class="sig-param">response</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.translate_message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Разбор сообщения от сервера
+:param response: Словарь ответа от сервера
+:return: корректный словарь ответа</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="client.Client.write_messages">
+<code class="sig-name descname">write_messages</code><span class="sig-paren">(</span><em class="sig-param">message_str</em><span class="sig-paren">)</span><a class="headerlink" href="#client.Client.write_messages" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Клиент ждет ввода сообщения в бесконечном цикле и отправляет их на сервер
+:param client: сокет клиента
+:param currClient: класс клиента, содержащий ник
+:return</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Messendger</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rootFolder.html">Корневая директория</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Директория ClientCore/clients</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-client">Модуль client.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Директория ServerCore/server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log.html">Директория LOG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html">Директория Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilitis.html">Директория Utilites</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="rootFolder.html" title="предыдущая глава">Корневая директория</a></li>
+      <li>Next: <a href="server.html" title="следующая глава">Директория ServerCore/server</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Pavel Bunkov.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/client.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,10 @@
+Директория ClientCore/clients
+===============================
+
+Модуль client.py
+----------------------------
+
+.. automodule:: client
+.. autoclass:: Client
+	:members:
+	

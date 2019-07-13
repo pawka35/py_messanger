@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Директория Utilites &#8212; документация Messendger 1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="prev" title="Папка Protocol" href="protocol.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="utilites">
+<h1>Директория Utilites<a class="headerlink" href="#utilites" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="module-serverGUI">
+<span id="servergui-py"></span><h2>Модуль serverGUI.py<a class="headerlink" href="#module-serverGUI" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="class">
+<dt id="serverGUI.ConfigWindow">
+<em class="property">class </em><code class="sig-prename descclassname">serverGUI.</code><code class="sig-name descname">ConfigWindow</code><a class="headerlink" href="#serverGUI.ConfigWindow" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс окна настроек</p>
+<dl class="method">
+<dt id="serverGUI.ConfigWindow.initUI">
+<code class="sig-name descname">initUI</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.ConfigWindow.initUI" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Настройка окна</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serverGUI.ConfigWindow.open_file_dialog">
+<code class="sig-name descname">open_file_dialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.ConfigWindow.open_file_dialog" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция обработчик открытия окна выбора папки</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="serverGUI.History">
+<em class="property">class </em><code class="sig-prename descclassname">serverGUI.</code><code class="sig-name descname">History</code><span class="sig-paren">(</span><em class="sig-param">clientId</em>, <em class="sig-param">connectTime</em>, <em class="sig-param">ipaddress</em><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.History" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для взаимодействия с БД, таблица History</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="serverGUI.Ui_Form">
+<em class="property">class </em><code class="sig-prename descclassname">serverGUI.</code><code class="sig-name descname">Ui_Form</code><a class="headerlink" href="#serverGUI.Ui_Form" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс GUI сервера</p>
+<dl class="method">
+<dt id="serverGUI.Ui_Form.exiteApp">
+<code class="sig-name descname">exiteApp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.Ui_Form.exiteApp" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Выход из приложения</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serverGUI.Ui_Form.historyList">
+<code class="sig-name descname">historyList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.Ui_Form.historyList" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Окно истории пользователей</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serverGUI.Ui_Form.retranslateUi">
+<code class="sig-name descname">retranslateUi</code><span class="sig-paren">(</span><em class="sig-param">Form</em><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.Ui_Form.retranslateUi" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Подписи</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serverGUI.Ui_Form.save_server_config">
+<code class="sig-name descname">save_server_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.Ui_Form.save_server_config" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Окно сохранения настроек сервера</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serverGUI.Ui_Form.setOptions">
+<code class="sig-name descname">setOptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.Ui_Form.setOptions" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Окно изменения настроек сервера</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serverGUI.Ui_Form.setupUi">
+<code class="sig-name descname">setupUi</code><span class="sig-paren">(</span><em class="sig-param">Form</em><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.Ui_Form.setupUi" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Настройка положения окон</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serverGUI.Ui_Form.startStopServer">
+<code class="sig-name descname">startStopServer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.Ui_Form.startStopServer" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запуск/остановка сервера</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="serverGUI.Ui_Form.userList">
+<code class="sig-name descname">userList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.Ui_Form.userList" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Окно списка пользователей</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="serverGUI.User">
+<em class="property">class </em><code class="sig-prename descclassname">serverGUI.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">description</em>, <em class="sig-param">password=''</em><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.User" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для взаимодействия с БД, таблица User</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="serverGUI.startWind">
+<code class="sig-prename descclassname">serverGUI.</code><code class="sig-name descname">startWind</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#serverGUI.startWind" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Отображение формы</p>
+</dd></dl>
+
+</div>
+<div class="section" id="gui">
+<h2>Окно GUI сервера<a class="headerlink" href="#gui" title="Ссылка на этот заголовок">¶</a></h2>
+<img alt="_images/serverGUI.JPG" src="_images/serverGUI.JPG" />
+</div>
+<div class="section" id="module-ServerBDClass">
+<span id="serverbdclass-py"></span><h2>Модуль ServerBDClass.py<a class="headerlink" href="#module-ServerBDClass" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В качестве СУБД используем sqlite.
+Опорная схема базы данных:
+На стороне сервера БД содержит следующие таблицы:
+1) клиент:
+a) логин;
+b) информация.
+2) история клиента:
+a) время входа;
+b) ip-адрес.
+3) список контактов (составляется на основании выборки всех записей с id владельца):
+a) id владельца;
+b) id клиента.</p>
+<dl class="class">
+<dt id="ServerBDClass.ActiveUser">
+<em class="property">class </em><code class="sig-prename descclassname">ServerBDClass.</code><code class="sig-name descname">ActiveUser</code><span class="sig-paren">(</span><em class="sig-param">clientId</em>, <em class="sig-param">connectTime</em>, <em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.ActiveUser" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для взаимодействия с БД. Таблица ActiveUser</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ServerBDClass.History">
+<em class="property">class </em><code class="sig-prename descclassname">ServerBDClass.</code><code class="sig-name descname">History</code><span class="sig-paren">(</span><em class="sig-param">clientId</em>, <em class="sig-param">connectTime</em>, <em class="sig-param">ipaddress</em><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.History" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для взаимодействия с БД. Таблица History</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ServerBDClass.ServerBD">
+<em class="property">class </em><code class="sig-prename descclassname">ServerBDClass.</code><code class="sig-name descname">ServerBD</code><span class="sig-paren">(</span><em class="sig-param">bdFile</em><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.ServerBD" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для взаимодействия с БД</p>
+<dl class="method">
+<dt id="ServerBDClass.ServerBD.addActiveClientToBD">
+<code class="sig-name descname">addActiveClientToBD</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">connInfo</em>, <em class="sig-param">clients</em><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.ServerBD.addActiveClientToBD" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Добавление активного клиента в БД
+:param login - имя пользователя
+:param connInfo - ip, port
+:return id пользователя</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ServerBDClass.ServerBD.addNewClient">
+<code class="sig-name descname">addNewClient</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">password</em><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.ServerBD.addNewClient" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Добавление нового клиента в БД
+:param login - имя пользователя
+:param password - пароль</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ServerBDClass.ServerBD.getActiveUserNames">
+<code class="sig-name descname">getActiveUserNames</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.ServerBD.getActiveUserNames" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получение списка активных пользователей
+:return список активных пользователей</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ServerBDClass.ServerBD.getAllUsers">
+<code class="sig-name descname">getAllUsers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.ServerBD.getAllUsers" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получение списка  пользователей
+:return список  пользователей</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ServerBDClass.ServerBD.getUserSekretKey">
+<code class="sig-name descname">getUserSekretKey</code><span class="sig-paren">(</span><em class="sig-param">login</em><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.ServerBD.getUserSekretKey" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получение хэша пароля пользователя
+:return хэш пароля пользователя</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ServerBDClass.ServerBD.getaCon">
+<code class="sig-name descname">getaCon</code><span class="sig-paren">(</span><em class="sig-param">withTime=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.ServerBD.getaCon" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получение истории заходов пользователей
+:return список истории заходов пользователей</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ServerBDClass.ServerBD.remFromActive">
+<code class="sig-name descname">remFromActive</code><span class="sig-paren">(</span><em class="sig-param">login</em><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.ServerBD.remFromActive" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Исключение пользователя из таблицы активных
+:param login - имя пользователя</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ServerBDClass.User">
+<em class="property">class </em><code class="sig-prename descclassname">ServerBDClass.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">description=''</em>, <em class="sig-param">password=''</em><span class="sig-paren">)</span><a class="headerlink" href="#ServerBDClass.User" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для взаимодействия с БД. Таблица Clients</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ServerVerifier">
+<span id="serververifier-py"></span><h2>Модуль ServerVerifier.py<a class="headerlink" href="#module-ServerVerifier" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Метакласс ServerVerifier, выполняющий базовую проверку класса «Сервер»:
+a) отсутствие вызовов connect для сокетов;
+b) использование сокетов для работы по TCP.</p>
+<dl class="class">
+<dt id="ServerVerifier.ServerVerifier">
+<em class="property">class </em><code class="sig-prename descclassname">ServerVerifier.</code><code class="sig-name descname">ServerVerifier</code><span class="sig-paren">(</span><em class="sig-param">clsname</em>, <em class="sig-param">bases</em>, <em class="sig-param">clsdict</em><span class="sig-paren">)</span><a class="headerlink" href="#ServerVerifier.ServerVerifier" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метакласс для базовых проверок</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-clientGUI">
+<span id="clientgui-py"></span><h2>Модуль clientGUI.py<a class="headerlink" href="#module-clientGUI" title="Ссылка на этот заголовок">¶</a></h2>
+<dl class="class">
+<dt id="clientGUI.Ui_Form">
+<em class="property">class </em><code class="sig-prename descclassname">clientGUI.</code><code class="sig-name descname">Ui_Form</code><a class="headerlink" href="#clientGUI.Ui_Form" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс окна client GUI</p>
+<dl class="method">
+<dt id="clientGUI.Ui_Form.retranslateUi">
+<code class="sig-name descname">retranslateUi</code><span class="sig-paren">(</span><em class="sig-param">Form</em><span class="sig-paren">)</span><a class="headerlink" href="#clientGUI.Ui_Form.retranslateUi" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Подписи кнопок</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="id1">
+<h2>Окно GUI клиента<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<img alt="_images/clientGUI.JPG" src="_images/clientGUI.JPG" />
+</div>
+<div class="section" id="module-ClientBDClass">
+<span id="clientbdclass-py"></span><h2>Модуль ClientBDClass.py<a class="headerlink" href="#module-ClientBDClass" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Хранение информации в БД на стороне клиента:
+a) список контактов;
+b) история сообщений</p>
+<dl class="class">
+<dt id="ClientBDClass.ActiveContacts">
+<em class="property">class </em><code class="sig-prename descclassname">ClientBDClass.</code><code class="sig-name descname">ActiveContacts</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">date</em>, <em class="sig-param">description=''</em>, <em class="sig-param">password=''</em><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.ActiveContacts" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для взаимодействия с БД. Таблица ActiveContacts</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ClientBDClass.ClientBD">
+<em class="property">class </em><code class="sig-prename descclassname">ClientBDClass.</code><code class="sig-name descname">ClientBD</code><a class="headerlink" href="#ClientBDClass.ClientBD" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс взаимодействия с БД клиента</p>
+<dl class="method">
+<dt id="ClientBDClass.ClientBD.ExcludeInLocalContactList">
+<code class="sig-name descname">ExcludeInLocalContactList</code><span class="sig-paren">(</span><em class="sig-param">contactName</em><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.ClientBD.ExcludeInLocalContactList" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Удаление контакта из «друзей»
+:param contactName - имя контакта</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ClientBDClass.ClientBD.IncludeInLocalContactList">
+<code class="sig-name descname">IncludeInLocalContactList</code><span class="sig-paren">(</span><em class="sig-param">contactName</em><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.ClientBD.IncludeInLocalContactList" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Добавление контакта в «друзъя»
+:param contactName - имя контакта</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ClientBDClass.ClientBD.addContactList">
+<code class="sig-name descname">addContactList</code><span class="sig-paren">(</span><em class="sig-param">contlist</em>, <em class="sig-param">myusername</em><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.ClientBD.addContactList" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Добавление контактов а в БД
+:param contlist - список пользователей
+:param myusername - имя пользоателя клиента(чтобы исключить из списка)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ClientBDClass.ClientBD.addMessageToHistory">
+<code class="sig-name descname">addMessageToHistory</code><span class="sig-paren">(</span><em class="sig-param">abLogin</em>, <em class="sig-param">message</em>, <em class="sig-param">inOut</em><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.ClientBD.addMessageToHistory" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Добавление сообщения в историю
+:param abLogin - имя контакта
+:param message - сообщение
+:param inOut - флаг входящее или исходящее</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ClientBDClass.ClientBD.getHistoryWithUser">
+<code class="sig-name descname">getHistoryWithUser</code><span class="sig-paren">(</span><em class="sig-param">abLogin</em><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.ClientBD.getHistoryWithUser" title="Ссылка на это определение">¶</a></dt>
+<dd><p>История сообщений с пользователем
+:param - abLogin - имя пользователя
+:return - список сообщений</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ClientBDClass.ClientBD.retLocalAllUsersList">
+<code class="sig-name descname">retLocalAllUsersList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.ClientBD.retLocalAllUsersList" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запрос списка всех пользователей
+:return - список всех пользователей</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ClientBDClass.ClientBD.retUserContactList">
+<code class="sig-name descname">retUserContactList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.ClientBD.retUserContactList" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запрос списка друзей
+:return - список друзей</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ClientBDClass.Contacts">
+<em class="property">class </em><code class="sig-prename descclassname">ClientBDClass.</code><code class="sig-name descname">Contacts</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">description=''</em>, <em class="sig-param">password=''</em><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.Contacts" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для взаимодействия с БД. Таблица Contacts</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ClientBDClass.LocalContacts">
+<em class="property">class </em><code class="sig-prename descclassname">ClientBDClass.</code><code class="sig-name descname">LocalContacts</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">description=''</em>, <em class="sig-param">password=''</em><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.LocalContacts" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для взаимодействия с БД. Таблица LocalContacts</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ClientBDClass.MessageHistory">
+<em class="property">class </em><code class="sig-prename descclassname">ClientBDClass.</code><code class="sig-name descname">MessageHistory</code><span class="sig-paren">(</span><em class="sig-param">login</em>, <em class="sig-param">message</em>, <em class="sig-param">time</em>, <em class="sig-param">inOut</em><span class="sig-paren">)</span><a class="headerlink" href="#ClientBDClass.MessageHistory" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Класс для взаимодействия с БД. Таблица MessageHistory</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ClientVerifier">
+<span id="clientverifier-py"></span><h2>Модуль ClientVerifier.py<a class="headerlink" href="#module-ClientVerifier" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Метакласс ClientVerifier, выполняющий базовую проверку класса «Клиент»:
+a) отсутствие вызовов accept и listen для сокетов;
+b) использование сокетов для работы по TCP;
+c) отсутствие создания сокетов на уровне классов.</p>
+<dl class="class">
+<dt id="ClientVerifier.ClientVerifier">
+<em class="property">class </em><code class="sig-prename descclassname">ClientVerifier.</code><code class="sig-name descname">ClientVerifier</code><span class="sig-paren">(</span><em class="sig-param">clsname</em>, <em class="sig-param">bases</em>, <em class="sig-param">clsdict</em><span class="sig-paren">)</span><a class="headerlink" href="#ClientVerifier.ClientVerifier" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Метакласс для базовой проверки класса Клиент</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-errors">
+<span id="errors-py"></span><h2>Модуль errors.py<a class="headerlink" href="#module-errors" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Модуль содержащий ошибки и описывающий реакцию на них</p>
+<dl class="exception">
+<dt id="errors.DigitName">
+<em class="property">exception </em><code class="sig-prename descclassname">errors.</code><code class="sig-name descname">DigitName</code><span class="sig-paren">(</span><em class="sig-param">username</em><span class="sig-paren">)</span><a class="headerlink" href="#errors.DigitName" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Исключение. когда имя пользователя состоит только из чисел</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="errors.MandatoryKeyError">
+<em class="property">exception </em><code class="sig-prename descclassname">errors.</code><code class="sig-name descname">MandatoryKeyError</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#errors.MandatoryKeyError" title="Ссылка на это определение">¶</a></dt>
+<dd><p>исключение. отсутствует обязательный атрибут response</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="errors.OutOfUserName">
+<em class="property">exception </em><code class="sig-prename descclassname">errors.</code><code class="sig-name descname">OutOfUserName</code><a class="headerlink" href="#errors.OutOfUserName" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Исключение. когда имя пользователя отстутствует</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="errors.ResponseCodeError">
+<em class="property">exception </em><code class="sig-prename descclassname">errors.</code><code class="sig-name descname">ResponseCodeError</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#errors.ResponseCodeError" title="Ссылка на это определение">¶</a></dt>
+<dd><p>исключение. переданный код отсутствует среди стандартных кодов</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="errors.ResponseCodeLenError">
+<em class="property">exception </em><code class="sig-prename descclassname">errors.</code><code class="sig-name descname">ResponseCodeLenError</code><span class="sig-paren">(</span><em class="sig-param">code</em><span class="sig-paren">)</span><a class="headerlink" href="#errors.ResponseCodeLenError" title="Ссылка на это определение">¶</a></dt>
+<dd><p>исключение. длина кода - не три символа</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="errors.UsernameToLongError">
+<em class="property">exception </em><code class="sig-prename descclassname">errors.</code><code class="sig-name descname">UsernameToLongError</code><span class="sig-paren">(</span><em class="sig-param">username</em><span class="sig-paren">)</span><a class="headerlink" href="#errors.UsernameToLongError" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Исключение. когда имя пользователя слишком длинное - более 25 символов</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-NonNegativeCheck">
+<span id="nonnegativecheck-py"></span><h2>Модуль NonNegativeCheck.py<a class="headerlink" href="#module-NonNegativeCheck" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Класс-дескриптор для проверки, что значение положительно</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Messendger</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="client.html">Директория ClientCore/clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Директория ClientCore/server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log.html">Директория LOG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html">Папка Protocol</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Директория Utilites</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-serverGUI">Модуль serverGUI.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gui">Окно GUI сервера</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ServerBDClass">Модуль ServerBDClass.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ServerVerifier">Модуль ServerVerifier.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-clientGUI">Модуль clientGUI.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Окно GUI клиента</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ClientBDClass">Модуль ClientBDClass.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ClientVerifier">Модуль ClientVerifier.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-errors">Модуль errors.py</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-NonNegativeCheck">Модуль NonNegativeCheck.py</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="protocol.html" title="предыдущая глава">Папка Protocol</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Pavel Bunkov.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/utilitis.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

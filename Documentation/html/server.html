@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Директория ServerCore/server &#8212; документация Messendger 1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Директория LOG" href="log.html" />
+    <link rel="prev" title="Директория ClientCore/clients" href="client.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="servercore-server">
+<h1>Директория ServerCore/server<a class="headerlink" href="#servercore-server" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="module-server">
+<span id="server-py"></span><h2>Модуль server.py<a class="headerlink" href="#module-server" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Функции ​​сервера:​
+- принимает ​с​ообщение ​к​лиента;
+- формирует ​​ответ ​к​лиенту;
+- отправляет ​​ответ ​к​лиенту;
+- инициализация параметров через файл ini</p>
+<dl class="class">
+<dt id="server.Server">
+<em class="property">class </em><code class="sig-prename descclassname">server.</code><code class="sig-name descname">Server</code><a class="headerlink" href="#server.Server" title="Ссылка на это определение">¶</a></dt>
+<dd><dl class="method">
+<dt id="server.Server.auth_response">
+<code class="sig-name descname">auth_response</code><span class="sig-paren">(</span><em class="sig-param">auth</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.auth_response" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Формирование ответа о прохождение аутентификации
+:param auth: флаг прохождения
+:return: положительный, либо отрицательный ответ</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.password_ask">
+<code class="sig-name descname">password_ask</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.password_ask" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Формирование сообщения «такой клиент не найдет»
+:return: сформированное сообщение</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.presence_response">
+<code class="sig-name descname">presence_response</code><span class="sig-paren">(</span><em class="sig-param">presence_message</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.presence_response" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Формирование ответа при передаче служебных сообщений
+:param presence_message: присланное служебное сообщение
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.read_requests">
+<code class="sig-name descname">read_requests</code><span class="sig-paren">(</span><em class="sig-param">r_clients</em>, <em class="sig-param">all_clients</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.read_requests" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Чтение сообщений, которые будут посылать клиенты
+:param r_clients: клиенты которые могут отправлять сообщения
+:param all_clients: все клиенты
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.reqPassword">
+<code class="sig-name descname">reqPassword</code><span class="sig-paren">(</span><em class="sig-param">conn</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.reqPassword" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запрос пароля у клиента (для добавление в БД)
+:param conn: сокет клиента
+:return: полученный от клиента хэш пароля</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.server_authenticate">
+<code class="sig-name descname">server_authenticate</code><span class="sig-paren">(</span><em class="sig-param">con</em>, <em class="sig-param">secret_key</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.server_authenticate" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запрос аутентификаии клиента.
+сonnection - сетевое соединение (сокет);
+secret_key - ключ шифрования =&gt; пароль клиента, который хранится в БД (и вводит клиент у себя)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.start">
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.start" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запуск сервера.
+Используем модуль select.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="server.Server.write_responses">
+<code class="sig-name descname">write_responses</code><span class="sig-paren">(</span><em class="sig-param">messages</em><span class="sig-paren">)</span><a class="headerlink" href="#server.Server.write_responses" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Отправка сообщений тем клиентам, которые их ждут
+:param messages: список сообщений
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Messendger</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rootFolder.html">Корневая директория</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Директория ClientCore/clients</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Директория ServerCore/server</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-server">Модуль server.py</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="log.html">Директория LOG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="protocol.html">Директория Protocol</a></li>
+<li class="toctree-l1"><a class="reference internal" href="utilitis.html">Директория Utilites</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="client.html" title="предыдущая глава">Директория ClientCore/clients</a></li>
+      <li>Next: <a href="log.html" title="следующая глава">Директория LOG</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Pavel Bunkov.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/server.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

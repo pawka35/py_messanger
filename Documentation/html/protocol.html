@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Директория Protocol &#8212; документация Messendger 1</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Директория Utilites" href="utilitis.html" />
+    <link rel="prev" title="Директория LOG" href="log.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="protocol">
+<h1>Директория Protocol<a class="headerlink" href="#protocol" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="module-proto_description">
+<span id="proto-description"></span><h2>Модуль proto_description<a class="headerlink" href="#module-proto_description" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Здест лежат ключи протокола обмена между клиентов и сервером
+представленые перечислениями</p>
+</div>
+<div class="section" id="module-utils">
+<span id="utils"></span><h2>Модуль utils<a class="headerlink" href="#module-utils" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Функции, которые используют как клиент, так и сервер</p>
+<dl class="function">
+<dt id="utils.bytes_to_dict">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">bytes_to_dict</code><span class="sig-paren">(</span><em class="sig-param">message_bytes</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.bytes_to_dict" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Преобразование байт в словарь
+:param message_bytes: байты
+:return: message - словарь</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.checkValue">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">checkValue</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.checkValue" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Проверка значения
+:param value: значение
+:return:</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.create_message">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">create_message</code><span class="sig-paren">(</span><em class="sig-param">message_to</em>, <em class="sig-param">text</em>, <em class="sig-param">account_name='Guest'</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.create_message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Формирование сообщения, согласно протоколу
+:param message_to: адресат
+:param text: текст сообщения
+:param account_name: отправитель
+:return: сообщение в формате протокола обмена</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.create_work_message">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">create_work_message</code><span class="sig-paren">(</span><em class="sig-param">userAction</em>, <em class="sig-param">message_to</em>, <em class="sig-param">text</em>, <em class="sig-param">account_name='Guest'</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.create_work_message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Создание служебного сообщения
+:param userAction: действие
+:param message_to: адресат
+:param text: текст сообщения
+:param account_name: отправитель
+:return: response - словарь</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.dict_to_bytes">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">dict_to_bytes</code><span class="sig-paren">(</span><em class="sig-param">message_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.dict_to_bytes" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Преобразование словаря в байты
+:param message_dict: словарь
+:return: bytes</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.getStartParametrs">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">getStartParametrs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#utils.getStartParametrs" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получение параметров запуска из командной строки для сервера и клиента (точка входа)
+:param
+:return: startOptions: сформированный список параметров</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.get_message">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">get_message</code><span class="sig-paren">(</span><em class="sig-param">sock</em>, <em class="sig-param">*address</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.get_message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получение информации из сокета и перевод её в словарь
+:param sock: сокет
+:param <a href="#id1"><span class="problematic" id="id2">*</span></a>address
+:return: response - словарь</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.paramForClient">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">paramForClient</code><span class="sig-paren">(</span><em class="sig-param">startOptions</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.paramForClient" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получение параметров запуска из командной строки для клиента
+:param startOptions: пустой список параметров
+:return: startOptions: сформированный список параметров</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.paramForServer">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">paramForServer</code><span class="sig-paren">(</span><em class="sig-param">startOptions</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.paramForServer" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Получение параметров запуска из командной строки для сервера
+:param startOptions: пустой список параметров
+:return: startOptions: сформированный список параметров</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="utils.send_message">
+<code class="sig-prename descclassname">utils.</code><code class="sig-name descname">send_message</code><span class="sig-paren">(</span><em class="sig-param">sock</em>, <em class="sig-param">message</em><span class="sig-paren">)</span><a class="headerlink" href="#utils.send_message" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Отправка сообщения через сокет
+:param sock: сокет
+:param message: сообщение в формате протокола обмена
+:return:</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Messendger</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption"><span class="caption-text">Содержание:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="rootFolder.html">Корневая директория</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Директория ClientCore/clients</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Директория ClientCore/server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="log.html">Директория LOG</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Директория Protocol</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-proto_description">Модуль proto_description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-utils">Модуль utils</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="utilitis.html">Директория Utilites</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="log.html" title="предыдущая глава">Директория LOG</a></li>
+      <li>Next: <a href="utilitis.html" title="следующая глава">Директория Utilites</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Pavel Bunkov.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/protocol.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

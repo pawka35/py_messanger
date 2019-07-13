@@ -1,0 +1,22 @@
+Корневая директория
+==============================
+
+Модуль Start_script.py
+----------------------------
+.. automodule:: Start_script
+	:members:
+	
+Модуль Start_script_many.py
+----------------------------
+.. automodule:: Start_script_many
+	:members:
+	
+Модуль Server_start.py
+----------------------------
+.. automodule:: Server_start
+	:members:
+	
+Модуль Client_Start.py
+----------------------------
+.. automodule:: Client_Start
+	:members:
